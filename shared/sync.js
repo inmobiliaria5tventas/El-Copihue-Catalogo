@@ -132,9 +132,13 @@ const SyncModule = (() => {
                 }
 
                 var rawPrecio = remoteLote.Precio !== undefined ? remoteLote.Precio : remoteLote.precio;
-                var precio = typeof rawPrecio === 'number' 
-                    ? rawPrecio 
-                    : parseInt(String(rawPrecio || '').replace(/[^0-9]/g, ''), 10);
+                var precio = NaN;
+
+                if (typeof rawPrecio === 'number') {
+                    precio = rawPrecio;
+                } else if (rawPrecio !== undefined && rawPrecio !== null && String(rawPrecio).trim() !== '') {
+                    precio = parseInt(String(rawPrecio).replace(/[^0-9]/g, ''), 10);
+                }
                 
                 // Only update if it's a valid number and greater than or equal to 0
                 if (!isNaN(precio) && precio >= 0 && precio !== localFeature.properties.precio) {
