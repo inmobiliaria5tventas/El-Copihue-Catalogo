@@ -6,7 +6,7 @@
  */
 const CRM_CONFIG = {
     // ── Pega aquí la URL de tu Google Apps Script Web App ──
-    APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbwoD52F9b1_cwnUCAzo28XGHRFdNrhku_b13HknYI7qx0R4mTtzqppGSwCNnSXnvg8/exec',
+    APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyjFP7mSLDgN9fOeW5o7bkmy1GeMrn2Eo5twPfuamO7fM51SBG_T8p4PgoBVqF29ZhI/exec',
     
     // ── Nombres de los proyectos (deben coincidir con las hojas del Sheet) ──
     PROYECTOS: {
